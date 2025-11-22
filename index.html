@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ФорсТех | Промышленная обработка металла и 3D-печать</title>
+    <meta name="description" content="Профессиональная электроэрозия, сварка, слесарные работы и 3D-печать. Высокая точность, гарантия качества.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <span class="company-name">ФОРСТЕХ</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#services" class="nav-link">Услуги</a>
+                <a href="#calculator" class="nav-link">Калькулятор</a>
+                <a href="#cases" class="nav-link">Кейсы</a>
+                <a href="#contacts" class="nav-link">Контакты</a>
+            </div>
+            <div class="nav-contact">
+                <a href="tel:+79330968305" class="phone-link">+7 (933) 096-83-05</a>
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Промышленная обработка металла и 3D-печать</h1>
+            <p class="hero-subtitle">Электроэрозия, сварка, слесарные работы и 3D-печать FDM. От прототипов до серийных изделий</p>
+            <div class="hero-features">
+                <div class="feature">✓ Электроэрозия ±0.01 мм</div>
+                <div class="feature">✓ Аргонодуговая сварка</div>
+                <div class="feature">✓ 3D-печать FDM 12+ материалов</div>
+            </div>
+            <button class="cta-button" onclick="scrollToCalculator()">Рассчитать стоимость</button>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-card">
+                <div class="card-content">
+                    <h3>Бесплатная консультация технолога</h3>
+                    <p>Подберем оптимальную технологию для вашей задачи</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Наши услуги</h2>
+            <div class="services-grid">
+                <!-- Вырезная электроэрозия -->
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Вырезная электроэрозия</h3>
+                    <ul class="service-specs">
+                        <li><strong>Тип:</strong> Молибденовая проволока</li>
+                        <li><strong>Скорость:</strong> 60-70 мм²/мин</li>
+                        <li><strong>Точность:</strong> ±0.01 мм</li>
+                        <li><strong>Стоимость:</strong> 1500₽/час</li>
+                        <li><strong>Материалы:</strong> Любые токопроводящие</li>
+                    </ul>
+                    <button class="service-btn" onclick="openCalculator('wire_edm')">Рассчитать стоимость</button>
+                </div>
+
+                <!-- Прошивная электроэрозия -->
+                <div class="service-card">
+                    <div class="service-icon">🔌</div>
+                    <h3>Прошивная электроэрозия</h3>
+                    <ul class="service-specs">
+                        <li><strong>Назначение:</strong> Глубокие полости, матрицы</li>
+                        <li><strong>Точность:</strong> ±0.015 мм</li>
+                        <li><strong>Стоимость:</strong> 650₽/час</li>
+                        <li><strong>Глубина:</strong> До 300 мм</li>
+                        <li><strong>Обработка:</strong> Сложные 3D-формы</li>
+                    </ul>
+                    <button class="service-btn" onclick="openCalculator('sinking_edm')">Рассчитать стоимость</button>
+                </div>
+
+                <!-- Сварка -->
+                <div class="service-card">
+                    <div class="service-icon">🔥</div>
+                    <h3>Аргонодуговая сварка</h3>
+                    <ul class="service-specs">
+                        <li><strong>Сталь/нержавейка:</strong> 1500₽/час</li>
+                        <li><strong>Алюминий/титан:</strong> 2000₽/час</li>
+                        <li><strong>Толщина:</strong> 0.5-20 мм</li>
+                        <li><strong>Контроль:</strong> Визуальный, УЗК</li>
+                        <li><strong>Гарантия:</strong> На все швы</li>
+                    </ul>
+                    <button class="service-btn" onclick="openCalculator('welding')">Рассчитать стоимость</button>
+                </div>
+
+                <!-- 3D-печать -->
+                <div class="service-card">
+                    <div class="service-icon">🖨️</div>
+                    <h3>3D-печать FDM</h3>
+                    <ul class="service-specs">
+                        <li><strong>Материалы:</strong> PLA, ABS, PETG, Nylon, TPU</li>
+                        <li><strong>Стоимость:</strong> От 3₽/см³ (PLA)</li>
+                        <li><strong>Точность:</strong> ±0.1-0.2 мм</li>
+                        <li><strong>Область печати:</strong> 300×300×400 мм</li>
+                        <li><strong>Постобработка:</strong> Шлифовка, покраска</li>
+                    </ul>
+                    <button class="service-btn" onclick="openCalculator('3d_printing')">Рассчитать стоимость</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="calculator">
+        <div class="container">
+            <h2 class="section-title">Калькулятор стоимости</h2>
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="serviceType">Выберите услугу:</label>
+                        <select id="serviceType">
+                            <option value="wire_edm">Вырезная электроэрозия</option>
+                            <option value="sinking_edm">Прошивная электроэрозия</option>
+                            <option value="welding">Сварка</option>
+                            <option value="3d_printing">3D-печать FDM</option>
+                        </select>
+                    </div>
+
+                    <!-- Поля для 3D-печати -->
+                    <div class="form-group" id="material3dGroup" style="display: none;">
+                        <label for="material3d">Материал 3D-печати:</label>
+                        <select id="material3d">
+                            <option value="pla" data-price="5">PLA (5₽/см³)</option>
+                            <option value="abs" data-price="8">ABS (8₽/см³)</option>
+                            <option value="petg" data-price="9">PETG (9₽/см³)</option>
+                            <option value="tpu" data-price="15">TPU - гибкий (15₽/см³)</option>
+                            <option value="nylon" data-price="18">Nylon (18₽/см³)</option>
+                            <option value="asa" data-price="14">ASA (14₽/см³)</option>
+                            <option value="pc" data-price="22">Polycarbonate (22₽/см³)</option>
+                            <option value="pla_plus" data-price="9">PLA+ улучшенный (9₽/см³)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="volumeGroup" style="display: none;">
+                        <label for="modelVolume">Объем модели (см³):</label>
+                        <input type="number" id="modelVolume" min="1" max="10000" value="50" step="1">
+                    </div>
+
+                    <div class="form-group" id="infillGroup" style="display: none;">
+                        <label for="infillPercent">Заполнение модели:</label>
+                        <select id="infillPercent">
+                            <option value="0.2">20% (эконом)</option>
+                            <option value="0.3">30% (стандарт)</option>
+                            <option value="0.5">50% (прочный)</option>
+                            <option value="0.8">80% (макс. прочность)</option>
+                            <option value="1.0">100% (полное)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="postprocessGroup" style="display: none;">
+                        <label>Постобработка:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" id="post_sanding" value="1.2"> Шлифовка (+20%)</label>
+                            <label><input type="checkbox" id="post_painting" value="1.3"> Покраска (+30%)</label>
+                        </div>
+                    </div>
+
+                    <!-- Поля для металлообработки -->
+                    <div class="form-group" id="materialGroup">
+                        <label for="material">Материал:</label>
+                        <select id="material">
+                            <option value="steel">Конструкционная сталь</option>
+                            <option value="stainless">Нержавеющая сталь</option>
+                            <option value="aluminum">Алюминий</option>
+                            <option value="titanium">Титан</option>
+                            <option value="copper">Медь</option>
+                            <option value="brass">Латунь</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="timeGroup">
+                        <label for="workTime">Время работы (часы):</label>
+                        <input type="number" id="workTime" min="1" max="100" value="2" step="0.5">
+                    </div>
+
+                    <div class="form-group" id="areaGroup" style="display: none;">
+                        <label for="cutArea">Площадь реза (мм²):</label>
+                        <input type="number" id="cutArea" min="100" max="100000" value="1000" step="100">
+                    </div>
+
+                    <div class="form-group" id="complexityGroup">
+                        <label for="complexity">Сложность работы:</label>
+                        <select id="complexity">
+                            <option value="1.0">Стандартная</option>
+                            <option value="1.2">Повышенная</option>
+                            <option value="1.5">Высокая</option>
+                        </select>
+                    </div>
+
+                    <div class="calculator-result">
+                        <h3>Примерная стоимость:</h3>
+                        <div class="price" id="calculatedPrice">—</div>
+                        <small>*Точный расчет после просмотра чертежа/модели</small>
+                    </div>
+                </div>
+
+                <div class="upload-section">
+                    <h3>Прикрепите чертеж/модель для точного расчета</h3>
+                    <div class="upload-area" id="uploadArea">
+                        <input type="file" id="fileInput" accept=".dxf,.dwg,.pdf,.jpg,.png,.stl,.obj,.3mf" multiple style="display: none;">
+                        <div class="upload-placeholder">
+                            📎 Перетащите файлы сюда<br>
+                            <small>Поддерживаются: DXF, DWG, PDF, STL, OBJ, 3MF, JPG, PNG</small>
+                        </div>
+                    </div>
+                    <div class="file-list" id="fileList"></div>
+                    
+                    <button class="submit-btn" onclick="submitCalculation()">Получить коммерческое предложение</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases Section -->
+    <section id="cases" class="cases">
+        <div class="container">
+            <h2 class="section-title">Реализованные проекты</h2>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-image">⚡</div>
+                    <div class="case-content">
+                        <h3>Штамповая оснастка для автопрома</h3>
+                        <p><strong>Задача:</strong> Изготовление матрицы для холодной штамповки</p>
+                        <p><strong>Решение:</strong> Вырезная Электроэрозия
+                        <p><strong>Материал
+                       :</strong> Инструментальная сталь</p>
+                        <p><strong>Результат:</strong> Срок изготовления 5 дней, точность ±0.008 мм</p>
+                    </div>
+                </div>
+                
+                <div class="case-card">
+                    <div class="case-image">🖨️</div>
+                    <div class="case-content">
+                        <h3>Прототип корпуса прибора</h3>
+                        <p><strong>Задача:</strong> Создание прототипа корпуса для тестирования</p>
+                        <p><strong>Решение:</strong> 3D-печать ABS с последующей постобработкой</p>
+                        <p><strong>Результат:</strong> Прототип за 2 дня, экономия 70% против литья</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts" class="contacts">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contacts-grid">
+                <div class="contact-info">
+                    <h3>Свяжитесь с нами</h3>
+                    <div class="contact-item">
+                        <strong>Телефон:</strong>
+                        <a href="tel:+79330968305">+7 (933) 096-83-05</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Email:</strong>
+                        <a href="mailto:teh.fros.connect@gmail.com">teh.fros.connect@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Telegram/WhatsApp:</strong>
+                        <a href="https://t.me/forstech">@forstech</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Режим работы:</strong>
+                        Пн-Пт: 8:00-17:00<br>
+                        Сб: 9:00-14:00
+                    </div>
+                    <div class="contact-item">
+                        <strong>Срочные заказы:</strong>
+                        Принимаем круглосуточно
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Быстрая заявка</h3>
+                    <input type="text" id="clientName" placeholder="Ваше имя">
+                    <input type="tel" id="clientPhone" placeholder="Телефон">
+                    <textarea id="clientMessage" placeholder="Описание задачи"></textarea>
+                    <button class="submit-btn" onclick="submitQuickRequest()">Отправить заявку</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ФорсТех. Промышленная обработка металла и 3D-печать. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="service-calculator.js"></script>
+    
+    <!-- Emergency initialization -->
+    <script>
+        setTimeout(function() {
+            console.log('FORSTECH: Emergency initialization...');
+            if (typeof initCalculator === 'function') {
+                initCalculator();
+            }
+        }, 100);
+    </script>
+</body>
+</html>
